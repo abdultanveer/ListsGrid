@@ -118,11 +118,16 @@ fun ListItem(bookCategory: BookCategory, modifier: Modifier = Modifier) {
             color = colorResource(id = R.color.colorPrimary)
         )
         Spacer(modifier = modifier.height(8.dp))
-
+        LazyRow{
+            items(bookCategory.bookImageResources){ items ->
+                BookImage(imageResId = items , contentDescriptionResId = items)
+            }
+        }
         // TODO
 
 
 
-    }}
+    }
+}
 
 data class BookCategory(@StringRes val categoryResourceId: Int, val bookImageResources: List<Int>)
