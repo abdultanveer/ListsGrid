@@ -123,10 +123,6 @@ fun ListItem(bookCategory: BookCategory, modifier: Modifier = Modifier) {
                 BookImage(imageResId = items , contentDescriptionResId = items)
             }
         }
-        // TODO
-
-
-
     }
 }
 
